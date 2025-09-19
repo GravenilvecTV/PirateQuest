@@ -11,8 +11,11 @@ class MapManager:
             pyscroll.data.TiledMapData(self.tmx_data),
             screen_size
         )
-        self.map_layer.zoom = 2
-    
+        self.map_layer.zoom = 2 
+
+    def add(self, sprite):
+        self.group.add(sprite)
+
     def render(self, surface, center):
         self.map_layer.center(center)
         rect = surface.get_rect()
