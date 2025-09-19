@@ -1,10 +1,8 @@
 import pygame
 
-class Player(pygame.sprite.Sprite):
+class Player():
 
     def __init__(self, map_width, map_height):
-        super().__init__()
-        
         # charger l'image du joueur (spritesheet)
         self.spritesheet = pygame.image.load('assets/spritesheets/characters.png')
 
@@ -17,8 +15,6 @@ class Player(pygame.sprite.Sprite):
             frame = self.spritesheet.subsurface(pygame.Rect(i * 32, 32, 32, 32))
             frame = pygame.transform.scale(frame, (self.size , self.size ))
             self.frames.append(frame)
-
-
 
     def draw(self, surface, screen_size):
         # centrer l'image du joueur

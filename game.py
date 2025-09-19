@@ -26,6 +26,9 @@ class Game:
                 if event.type == pygame.QUIT:
                     self.running = False
 
+            # touche clavier
+            self.player.handle_keys()
+
             # rafraichir les elements du jeu
             self.screen.fill((0, 0, 0))
             self.map_manager.render(self.screen, (0, 0))
