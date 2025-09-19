@@ -16,7 +16,7 @@ class Game:
             self.map_manager.tmx_data.width,
             self.map_manager.tmx_data.height
         )
- 
+
         self.running = True
 
     def run(self):

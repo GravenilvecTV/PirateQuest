@@ -13,12 +13,12 @@ class Player(pygame.sprite.Sprite):
         self.size = 64
         self.map_width = map_width
         self.map_height = map_height
-
         for i in range(3):
             frame = self.spritesheet.subsurface(pygame.Rect(i * 32, 32, 32, 32))
             frame = pygame.transform.scale(frame, (self.size , self.size ))
             self.frames.append(frame)
- 
+
+
 
     def draw(self, surface, screen_size):
         # centrer l'image du joueur
